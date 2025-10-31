@@ -1,6 +1,15 @@
 PetPurchased = ["Dog", "Dog", "Cat", "Rabbit", "Hamster", "Cat", "Hamster", "Budgie"]
-counter = -1
+AllUsers = []
+PositionOfUser = 0
+TargetAnimal = "Cat"
 
 
-for loop in PetPurchased[i]:
-    
+for i in range (len(PetPurchased)):
+    if PetPurchased[i] == TargetAnimal:
+        print ("position:", PositionOfUser)
+    else:
+        AllUsers.append [i+1]
+   
+
+
+
