@@ -1,16 +1,15 @@
 
 
 OwnsAnIPhone =["yes", "no", "no", "no", "yes","yes","yes","yes"]
-
-ValueToFind= "yes"
 counter = 0
-found = False
 
-while counter 
-for i in range (len(OwnsAnIPhone)):
-    if OwnsAnIPhone == "yes":
+for i in range(len(OwnsAnIPhone)):
+    if OwnsAnIPhone[i] == "yes":
          counter = counter + 1
+    else:
+         counter = counter
 
+print (counter, "owns Iphones")
 
-
-print (str(counter) + "owns Iphones")
+#i is index. index is to go along 
+#len is the length of the array
