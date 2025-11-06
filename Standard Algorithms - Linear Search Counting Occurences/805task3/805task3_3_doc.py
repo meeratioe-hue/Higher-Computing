@@ -8,4 +8,4 @@ for i in range (len(PetPurchased)):
         print ("position:", i)
 
 
-#use 'i' because it will 
+#use 'i' because?
