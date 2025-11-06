@@ -8,3 +8,7 @@ with open("1101. File Handling/1101 Task 1/SampleFile.txt") as readfile:
         print(nextLine.strip())
         time.sleep(2)
         nextLine = readfile.readline()
+
+
+#always will come out in exam,
+#possibly need to add an if statement within this code
