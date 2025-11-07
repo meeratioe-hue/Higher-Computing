@@ -8,7 +8,9 @@ with open("1101. File Handling/1101 Task 3/pupils.txt") as readfile:
         names.append(items[0])
         marks.append(items[1])
         line = readfile.readline().rstrip('\n')
-for i in print(names,marks)
+
+for i in range (len(names and marks)):
+    print (names[i], "got", marks[i])
 
 
 # Run the program. Now edit the code so that it displays each student name with their mark e.g. Monica - 85
