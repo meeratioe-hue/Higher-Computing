@@ -6,25 +6,31 @@ class person():
   weight : float = 0.0
   bmi : float = 0.0
 
-people = [person() for index in range(5)]
+BMIrecord = [person() for index in range(5)]
 
 
 BMIrecord[1].height = 1.75
 BMIrecord[1].weight = 70.5
-BMIrecord[1].bmi = BMIrecord[1].weight / BMIrecord[1].height **2 
+BMIrecord[1].bmi = BMIrecord[1].weight / (BMIrecord[1].height **2 )
 
 BMIrecord[1].height = 1.62
 BMIrecord[1].weight = 55.8
-BMIrecord[1].bmi = BMIrecord[1].weight / BMIrecord[1].height **2 
+BMIrecord[1].bmi = BMIrecord[1].weight /( BMIrecord[1].height **2 )
 
 BMIrecord[1].height = 1.88
 BMIrecord[1].weight = 95.2
-BMIrecord[1].bmi = BMIrecord[1].weight / BMIrecord[1].height **2 
+BMIrecord[1].bmi = BMIrecord[1].weight / (BMIrecord[1].height **2 )
 
 BMIrecord[1].height = 1.70
 BMIrecord[1].weight = 82.3
-BMIrecord[1].bmi = BMIrecord[1].weight / BMIrecord[1].height **2 
+BMIrecord[1].bmi = BMIrecord[1].weight / (BMIrecord[1].height **2 )
 
 BMIrecord[1].height = 1.80
 BMIrecord[1].weight = 68.0
-BMIrecord[1].bmi = BMIrecord[1].weight / BMIrecord[1].height **2 
+BMIrecord[1].bmi = BMIrecord[1].weight / (BMIrecord[1].height **2 )
+
+print(BMIrecord[0])
+print(BMIrecord[1])
+print(BMIrecord[2])
+print(BMIrecord[3])
+print(BMIrecord[4])
