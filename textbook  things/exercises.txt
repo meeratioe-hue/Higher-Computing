@@ -1,0 +1,30 @@
+#Puzzle Set 1-Input and Output
+Bicycle Chain
+Labradoodle Two
+Scott aged 23
+Lava JavaLava Java
+video videovideo
+Going GoingGone
+This, is a plus + symbol
+Be kind whenever possible.
+energy(vowl)= cm squared
+word1 : life
+wird2 : live
+
+#Puzzle Set 2 - Simple Calculations
+2.0
+18
+16
+5.0
+4.0
+19
+80
+5. 10. 25  #should be all floats 
+5. 60. 10 
+49
+67.0
+
+
+
+
+
