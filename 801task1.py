@@ -8,6 +8,12 @@ class person():
 
 BMIrecord = [person() for index in range(5)]
 
+# this in input validation, but N5 level so don't worry about it in exams
+thisHeight = float(input("Please enter your height: "))
+while thisHeight <= 0 or thisHeight > 2.5:
+  print("ERROR! YOUR ARE TOO BIG / SMALL")
+  thisHeight = float(input("Please enter your height: "))
+
 
 BMIrecord[1].height = 1.75
 BMIrecord[1].weight = 70.5
