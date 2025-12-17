@@ -9,7 +9,7 @@ This, is a plus + symbol
 Be kind whenever possible.
 energy(vowl)= cm squared
 word1 : life
-wird2 : live
+word2 : live
 
 #Puzzle Set 2 - Simple Calculations
 2.0

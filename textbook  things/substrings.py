@@ -8,6 +8,6 @@ print (word2)
 sentence = "Hello"
 print (len(sentence))
 
-#count() conts ocurences of one string in another
+#count() counts occurences of one string in another
 sentence = "Sentence"
 print (sentence.count("e"))
