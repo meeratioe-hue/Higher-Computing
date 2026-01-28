@@ -1,3 +1,16 @@
+from dataclasses import dataclass
+@dataclass
+class orders():
+    orderNum = str
+    date = str
+    email = str
+    option = str
+    cost = float
+    rating = int
+
+
+
+
 def ReadFromFileIntoArrayOfRecords():
     return orders 
 
@@ -24,11 +37,24 @@ def FindThePositionOfTheCustomer (orders) :
 def WriteDetailsOfTheWinningCustomer (orders, position):
     pass
 #3.1 Open new file ‘winningCustomer.txt’
+with open("winningCustomer.txt", "w") as writefile:
+
 #3.2 If position is 0 or above then
+    if position == 0 or position > 0:
+
 #3.3 Write winning order number, email and cost to ‘winningCustomer.txt’
+        writefile.write(number, email, cost)
+     
+
 #3.4 Else
+
+
 #3.5 Write ‘No winner’ to ‘winningCustomer.txt’
+
+
 #3.6 End if
+
+
 #3.7 Close ‘winningCustomer.txt’
 
 
