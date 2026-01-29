@@ -8,18 +8,29 @@ class orders():
     cost : float = 0.0
     rating : int = 0
 
+finalorders = [orders()for i in range (505)]
+
+#array stores one type 
+#record stores a bunch of things
 
 def ReadFromFileIntoArrayOfRecords():
-   with open ("orders.txt") as readfile: 
-      nextLine = readfile.readline()
-      while nextLine != "":
-        print(nextLine.strip())
-        orders.orderNum(i)
-        nextLine = readfile.readline()
-   
-
-   return orders 
-
+#read data from the ‘orders.txt’ file and store into an array of records
+    with open ("orders.txt") as readfile: 
+        nextLine = readfile.readline().rstrip("/n")
+        finalorders = nextLine.split(",")
+        for i in range (505):
+            orders[i].orderNum = finalorders[0]
+            orders.date = finalorders[1]
+            orders.email = finalorders[2]
+            orders.option = finalorders[3]
+            orders.cost = finalorders[4]
+            orders.rating = finalorders[5]
+            #finalorders is an array. take first thing from that and set it to orderNum in orders
+        while nextLine:
+            print(nextLine.strip())
+            orders.orderNum(i)
+            nextLine = readfile.readline()
+    return orders 
 
 
 def FindThePositionOfTheCustomer (orders) :
@@ -74,7 +85,7 @@ def DisplayTheTotalNumberOfOrders (orders):
 
 #main program
 orders =ReadFromFileIntoArrayOfRecords()
-position = FindThePositionOfTheCustomer (orders)
-WriteDetailsOfTheWinningCustomer (orders, position)
-DisplayTheTotalNumberOfOrders (orders)
+#position = FindThePositionOfTheCustomer (orders)
+# WriteDetailsOfTheWinningCustomer (orders, position)
+# DisplayTheTotalNumberOfOrders (orders)
                                     
