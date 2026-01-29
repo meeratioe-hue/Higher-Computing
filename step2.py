@@ -1,13 +1,12 @@
 from dataclasses import dataclass
 @dataclass
 class orders():
-    orderNum = str
-    date = str
-    email = str
-    option = str
-    cost = float
-    rating = int
-
+    orderNum : str =""
+    date: str =""
+    email : str =""
+    option : str =""
+    cost : float =""
+    rating : int =""
 
 
 
@@ -34,18 +33,15 @@ def FindThePositionOfTheCustomer (orders) :
 #2.10 Return position
     return position 
 
+
 def WriteDetailsOfTheWinningCustomer (orders, position):
-    pass
 #3.1 Open new file ‘winningCustomer.txt’
-with open("winningCustomer.txt", "w") as writefile:
 
 #3.2 If position is 0 or above then
     if position == 0 or position > 0:
-
+        with open("winningCustomer.txt", "w") as writefile:
 #3.3 Write winning order number, email and cost to ‘winningCustomer.txt’
-        writefile.write(number, email, cost)
-     
-
+            writefile.write(orders.orderNum + "," + orders.email + "," +  str(orders.cost))
 #3.4 Else
 
 
@@ -56,8 +52,6 @@ with open("winningCustomer.txt", "w") as writefile:
 
 
 #3.7 Close ‘winningCustomer.txt’
-
-
 
 
 
