@@ -5,13 +5,22 @@ class orders():
     date: str =""
     email : str =""
     option : str =""
-    cost : float =""
-    rating : int =""
-
+    cost : float = 0.0
+    rating : int = 0
 
 
 def ReadFromFileIntoArrayOfRecords():
-    return orders 
+   with open ("orders.txt") as readfile: 
+      nextLine = readfile.readline()
+      while nextLine != "":
+        print(nextLine.strip())
+        orders.orderNum(i)
+        nextLine = readfile.readline()
+   
+
+   return orders 
+
+
 
 def FindThePositionOfTheCustomer (orders) :
 #2.1 Set position to -1
@@ -36,27 +45,31 @@ def FindThePositionOfTheCustomer (orders) :
 
 def WriteDetailsOfTheWinningCustomer (orders, position):
 #3.1 Open new file ‘winningCustomer.txt’
-
+    with open("winningCustomer.txt", "w") as writefile:
 #3.2 If position is 0 or above then
-    if position == 0 or position > 0:
-        with open("winningCustomer.txt", "w") as writefile:
+        if position >= 0 :
 #3.3 Write winning order number, email and cost to ‘winningCustomer.txt’
-            writefile.write(orders.orderNum + "," + orders.email + "," +  str(orders.cost))
+                writefile.write(orders.orderNum + "," + orders.email + "," +  str(orders.cost))
 #3.4 Else
-
-
+        else:
 #3.5 Write ‘No winner’ to ‘winningCustomer.txt’
-
-
+            writefile.write("No winner")
 #3.6 End if
-
-
 #3.7 Close ‘winningCustomer.txt’
-
+    pass
 
 
 def DisplayTheTotalNumberOfOrders (orders):
+#4.1 Call countOption function to return the number of orders delivered
+
+#4.2 Call countOption function to return the number of orders collected
+
+#4.3 Output the total number of orders delivered
+
+#4.4 Output the total number of orders collected
+
     pass
+
 
 
 #main program
