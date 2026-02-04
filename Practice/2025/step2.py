@@ -8,28 +8,29 @@ class orders():
     cost : float = 0.0
     rating : int = 0
 
-finalorders = [orders()for i in range (505)]
+finalorders = [orders() for i in range(505)] #array of records
 
 #array stores one type 
 #record stores a bunch of things
 
 def ReadFromFileIntoArrayOfRecords():
 #read data from the ‘orders.txt’ file and store into an array of records
-    with open ("orders.txt") as readfile: 
+    with open ("orders.txt") as readfile:
+        nextLine = readfile.readline().rstrip("\n")
         for i in range (505):
-            nextLine = readfile.readline().rstrip("\n")
             items = nextLine.split(",")
-            if len(items) == 6:
-                finalorders[i].orderNum = items[0]
-                finalorders[i].date = items[1]
-                finalorders[i].email = items[2]
-                finalorders[i].option = items[3]
-                finalorders[i].cost = float(items[4])
-                finalorders[i].rating = int(items[5])
+            finalorders[i].orderNum = items[0]
+            finalorders[i].date = items[1]
+            finalorders[i].email = items[2]
+            finalorders[i].option = items[3]
+            finalorders[i].cost = float(items[4])
+            finalorders[i].rating = int(items[5])
+            nextLine = readfile.readline().rstrip("\n")
+            ##finalorders is an array. take first thing from that and set it to orderNum in orders
     return finalorders 
 
 
-def FindThePositionOfTheCustomer (finalorders) :
+def FindThePositionOfTheCustomer(finalorders) :
 #2.1 Set position to -1
     position = -1 
 #2.2 Set index to 0
@@ -37,7 +38,7 @@ def FindThePositionOfTheCustomer (finalorders) :
 #2.3 Ask user to enter month to search for
     month = input("Enter the month you want to search for: ")
 #2.4 While position is -1 and index is less than the length of the array
-    while position == -1 and index < len(finalorders):
+    while position == -1 and index < 505:
 #2.5 If current month is equal to searched month and current rating is 5 then
         if finalorders[index].date[3:6] == month and finalorders[index].rating == 5:
 #2.6 Set position to index
@@ -56,7 +57,7 @@ def WriteDetailsOfTheWinningCustomer (finalorders, position):
 #3.2 If position is 0 or above then
         if position >= 0 :
 #3.3 Write winning order number, email and cost to ‘winningCustomer.txt’
-            writefile.write(finalorders[position].orderNum + "," + finalorders[position].email + "," +  str(finalorders[position].cost))
+                writefile.write(finalorders[position].orderNum + "," + finalorders[position].email + "," +  str(finalorders[position].cost))
 #3.4 Else
         else:
 #3.5 Write ‘No winner’ to ‘winningCustomer.txt’
@@ -79,8 +80,9 @@ def DisplayTheTotalNumberOfOrders (orders):
 
 
 #main program
-finalorders =ReadFromFileIntoArrayOfRecords()
-position = FindThePositionOfTheCustomer (finalorders)
+finalorders=ReadFromFileIntoArrayOfRecords()
+# print(finalorders)
+position = FindThePositionOfTheCustomer(finalorders)
 WriteDetailsOfTheWinningCustomer (finalorders, position)
-DisplayTheTotalNumberOfOrders (finalorders)
+#DisplayTheTotalNumberOfOrders (orders)
                                     
