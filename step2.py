@@ -84,5 +84,5 @@ finalorders=ReadFromFileIntoArrayOfRecords()
 # print(finalorders)
 position = FindThePositionOfTheCustomer(finalorders)
 WriteDetailsOfTheWinningCustomer (finalorders, position)
-#DisplayTheTotalNumberOfOrders (orders)
+DisplayTheTotalNumberOfOrders (finalorders)
                                     
