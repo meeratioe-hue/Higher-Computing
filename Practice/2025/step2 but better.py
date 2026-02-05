@@ -68,7 +68,7 @@ def WriteDetailsOfTheWinningCustomer (finalorders, position):
 
 def DisplayTheTotalNumberOfOrders (orders):
 #4.1 Call countOption function to return the number of orders delivered
-
+    countOption(finalorders)
 #4.2 Call countOption function to return the number of orders collected
 
 #4.3 Output the total number of orders delivered
@@ -77,12 +77,19 @@ def DisplayTheTotalNumberOfOrders (orders):
 
     pass
 
+counter = 0
+def countOption (finalorders):
+    for i in range(len(finalorders)):
+        if finalorders[i].option == "Delivery":
+            counter = counter + 1
+        else:
+            counter = counter 
+print(counter, "orders were delivered")
 
 
 #main program
 finalorders=ReadFromFileIntoArrayOfRecords()
-# print(finalorders)
 position = FindThePositionOfTheCustomer(finalorders)
 WriteDetailsOfTheWinningCustomer (finalorders, position)
-#DisplayTheTotalNumberOfOrders (orders)
+DisplayTheTotalNumberOfOrders (finalorders)
                                     
