@@ -9,12 +9,11 @@ class student():
 theStudents = [student() for i in range(10)] 
 
 def writeAllStudentsToFile (theStudents, index):
-#3.1 Open new file ‘winningCustomer.txt’
     with open("Students.txt", "w") as writefile:
-#3.3 Write winning order number, email and cost to ‘winningCustomer.txt’
-        writefile.write(theStudents[index].studentID + "," + str(theStudents[index].email) + "," +  str(theStudents[index].password) + ","+ theStudents[index].yearGroup)
+        for i in theStudents:
+            writefile.write(str(theStudents[index].studentID) + "," + theStudents[index].email + "," +  theStudents[index].password + ","+ str(theStudents[index].yearGroup))
 
-
-index = writeAllStudentsToFile(theStudents[index])
+index = 0
+writeAllStudentsToFile(theStudents, index)
 
 
