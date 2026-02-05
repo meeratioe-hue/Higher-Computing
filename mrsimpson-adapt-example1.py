@@ -11,9 +11,9 @@ theStudents = [student() for i in range(10)]
 def writeAllStudentsToFile (theStudents, index):
     with open("Students.txt", "w") as writefile:
         for i in theStudents:
-            writefile.write(str(theStudents[index].studentID) + "," + theStudents[index].email + "," +  theStudents[index].password + ","+ str(theStudents[index].yearGroup))
+            writefile.write(i.studentID) + "," + i.email + "," +  i.password + ","+ str(i.yearGroup)
 
-index = 0
-writeAllStudentsToFile(theStudents, index)
+
+writeAllStudentsToFile(theStudents)
 
 
