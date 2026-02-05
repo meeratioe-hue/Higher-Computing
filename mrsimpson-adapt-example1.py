@@ -6,16 +6,15 @@ class student():
     password : str =""
     yearGroup : int = 10
 
+theStudents = [student() for i in range(10)] 
 
-
-def writeAllStudentsToFile (theStudents):
+def writeAllStudentsToFile (theStudents, index):
 #3.1 Open new file ‘winningCustomer.txt’
     with open("Students.txt", "w") as writefile:
 #3.3 Write winning order number, email and cost to ‘winningCustomer.txt’
-            writefile.write(finalorders[position].orderNum + "," + finalorders[position].email + "," +  str(finalorders[position].cost))
-#3.4 Else
-        else:
-#3.5 Write ‘No winner’ to ‘winningCustomer.txt’
-            writefile.write("No winner")
+        writefile.write(theStudents[index].studentID + "," + str(theStudents[index].email) + "," +  str(theStudents[index].password) + ","+ theStudents[index].yearGroup)
+
+
+index = writeAllStudentsToFile(theStudents[index])
 
 
