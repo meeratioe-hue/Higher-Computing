@@ -90,3 +90,4 @@ DisplayTheTotalNumberOfOrders (finalorders)
 #notes:
 #array stores one type 
 #record stores a bunch of things
+# with open (path="orders.txt") DO THIS IF GOT ERROR (ex. in github)
