@@ -65,7 +65,9 @@ def DisplayTheTotalNumberOfOrders (finalorders):
     countOption(finalorders)
 #4.2 Call countOption function to return the number of orders collected
 #4.3 Output the total number of orders delivered
+print("Total number of orders delivered to date: ", counterDelivered)
 #4.4 Output the total number of orders collected
+print("Total number of orders collected to date: ", counterCollected)
 
 def countOption (finalorders):
     counterDelivered = 0
@@ -78,8 +80,6 @@ def countOption (finalorders):
         else:
             counterDelivered = counterDelivered
             counterCollected - counterCollected
-    print("Total number of orders delivered to date: ", counterDelivered)
-    print("Total number of orders collected to date: ", counterCollected)
 
 #main program
 finalorders=ReadFromFileIntoArrayOfRecords()
@@ -90,4 +90,5 @@ DisplayTheTotalNumberOfOrders (finalorders)
 #notes:
 #array stores one type 
 #record stores a bunch of things
-# with open (path="orders.txt") DO THIS IF GOT ERROR (ex. in github)
+#with open (path="orders.txt") DO THIS IF GOT ERROR (Ex. in github)
+#print has to be in line 68 and 70 instead of line 83 and 84 cos of comments 4.3 and 4.4 

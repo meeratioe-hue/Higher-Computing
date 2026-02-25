@@ -1,6 +1,26 @@
 <html>
 
 <head>
+  <script>
+    function senior() {
+      document.getElementById("meerascorecard dont be confused be confused.com").src="../Images/senior.png";
+    }
+
+    function junior() {
+      document.getElementById("meerascorecard dont be confused be confused.com").src="../Images/junior.png";
+    }
+    function adult() {
+      document.getElementById("meerascorecard dont be confused be confused.com").src="../Images/adult.png";
+        
+    }
+    function blank() {
+      document.getElementById("meerascorecard dont be confused be confused.com").src ="../Images/scorecard.png";
+        
+    } 
+
+    
+    
+  </script>
   <meta charset="UTF-8">
   <title>Paradise Mini Golf</title>
   <link href="..\CSS\style.css" rel="stylesheet" type="text/css" />
@@ -24,20 +44,17 @@
 <p>Here is the scorecard for Paradise Mini Golf. Hover your mouse over the scorecards on the left to see them larger.</p>
 <section class = "left">
 <h2>Senior record</h2>
-<img src ="..\Images\senior.png" width = "190px">
+<img onmouseover="senior()"onmouseout="blank()" src ="..\Images\senior.png" width = "190px">
 <h2>Adult record</h2>
-<img src ="..\Images\adult.png" width = "190px">
+<img onmouseover="adult()"onmouseout="blank()" src ="..\Images\adult.png" width = "190px">
 <h2>Junior record</h2>
-<img src ="..\Images\junior.png" width = "190px">
+<img onmouseover="junior()" onmouseout="blank()" src ="..\Images\junior.png" width = "190px">
 </section>
 
 <section id = "openscreen">
 <h2>Scorecard</h2>
-<img src ="..\Images\scorecard.png" width="650px" height = "890px">
+<img  id="meerascorecard dont be confused be confused.com" src ="..\Images\scorecard.png" width="650px" height = "890px">
 </section>
-
-
-
 
 </main>
 
